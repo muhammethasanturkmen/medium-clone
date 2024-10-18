@@ -18,8 +18,8 @@ export default async function Profile() {
       <p className="user-name">{user.email}</p>
       <h2>Save Post</h2>
       <div className="profile-cizgi"></div>
-      {savePost.map(x =>
-        <p key={x.id}>
+      {savePost.map((x, i) =>
+        <p key={i}>
           <Link className="save-post" href={`/posts/${x.id}`}>
             <h3>{x.title}</h3>
             {x.content}
