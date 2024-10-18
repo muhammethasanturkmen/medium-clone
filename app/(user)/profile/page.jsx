@@ -11,6 +11,7 @@ export default async function Profile() {
   let { data: savePost, error } = await supabase
     .from('savePost')
     .select('*')
+    .eq('user_id', user.id)
   console.log(savePost)
 
   return (
