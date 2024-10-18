@@ -11,8 +11,8 @@ export default async function Home() {
   return (
     <>
     {posts.map(x => 
-        <div className="home">
-          <Link className="main-link" href={`/posts/${x.id}`} key={x.id}><h3>{x.title}</h3> <p>{x.content}</p></Link>
+        <div className="home" key={x.id}>
+          <Link className="main-link" href={`/posts/${x.id}`}><h3>{x.title}</h3> <p>{x.content}</p></Link>
           <div className="cizgi"></div>
         </div>
     )}

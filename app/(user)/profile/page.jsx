@@ -20,7 +20,7 @@ export default async function Profile() {
       <div className="profile-cizgi"></div>
       {savePost.map(x =>
         <p key={x.id}>
-          <Link className="save-post" href={`/posts/${x.id}`} key={x.id}>
+          <Link className="save-post" href={`/posts/${x.id}`}>
             <h3>{x.title}</h3>
             {x.content}
           </Link>
